@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Japonia</title>
+	<meta name="author" content="Mitrache Cristian">
+	<meta charset="UTF-8">
+	<meta name="description" content="Proiect: Japonia">
+	<link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="script.js"></script>
+</head>
+
+
+<body>
+  <header>
+   <a href="index.html"><img src="imagini/banner.png" alt="banner"></a>
+
+
+   <br><br>
+   <nav class="meniu">
+    <ul>
+     <li><a href="index.html">Pagina principala</a></li>
+     <li><a href="#"> Despre japonia </a>
+       <ul>
+        <li><a href="despre.html#geografie"> Geografie</a></li>
+        <li><a href="despre.html#demografie"> Demografie</a></li>
+        <li><a href="despre.html#politica">Politica</a></li>
+      </ul>
+    </li>
+    <li><a href="locuri.html">Locuri de vizitat</a></li>
+    <li><a href="galerie.html">Galerie</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+</header>
+
+
+<div class="continut">
+  <section id="formular">
+    <h2>Contact</h2>
+    <p>Pentru mai multe informatii sau posibile informații gresite pe care le gasiti pe site vă rugăm sa ne contactați folosind formularul de mai jos.</p>
+    Nume:<br>
+    <input name="nume" size="30" type="text" placeholder="Nume" id="nume"><br> Email:<br>
+    <p id="Aemail"></p>
+    <input name="email" size="30" type="text" placeholder="Email" id="email"><br> Mesaj:<br>
+    <p id="Amesaj"></p>
+    <textarea name="mesaj" rows="7" cols="30" id="mesaj">
+    </textarea><br>
+    <button onclick="preview()">Trimite</button>
+    <button onclick="parag()">Arata paragrafe</button>
+    <button onclick="data()">Afiseaza Data</button>
+    <script>
+      function preview(){
+        var rezultat;
+        var paragraf = document.createElement("p");
+        rezultat = "Persoana " + document.getElementById("nume").value + " cu emailul " + document.getElementById("email").value + " vrea sa iti trimita mesajul ' " + document.getElementById("mesaj").value + "'";
+        var node = document.createTextNode(rezultat);
+        paragraf.appendChild(node);
+        document.body.appendChild(paragraf);
+      }
+
+      function parag(){
+        var x = document.querySelectorAll("p");
+        var i;
+        for (i = 0; i < x.length; i++) {
+          x[i].style.backgroundColor = "red";
+        } }
+
+        function data(){
+
+          var azi = new Date();
+          var zi = azi.getDate();
+          var ll = azi.getMonth()+1; 
+          var aaaa = azi.getFullYear();
+
+          if(zi<10) {
+            zi='0'+dd
+          } 
+
+          if(ll<10) {
+            ll='0'+ll
+          } 
+
+          azi = zi+'/'+ll+'/'+aaaa;
+          azi = azi.big();
+
+          var paragraf = document.createElement("p");
+          var node = document.createTextNode(azi);//pune innerHTML
+          paragraf.appendChild(node);
+          document.body.appendChild(paragraf);
+        }
+
+        document.addEventListener("click", function(){
+          document.getElementById("Aemail").innerHTML = "Adresa email va fi folosita pentru a va raspunde la mesaj!";
+        });
+      </script>
+    </section>
+  </div>
+
+  <footer>
+    <section id="copyright">
+     &copy; 2016 - Tema TW - Mitrache Cristian (233)
+   </section>
+ </footer>
+</body>
+</html>

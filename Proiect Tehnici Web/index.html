@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Japonia</title>
+	<meta name="author" content="Mitrache Cristian">
+	<meta charset="UTF-8">
+	<meta name="description" content="Proiect: Japonia">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+</head>
+
+
+<body onclick="ceAiApasat(event)">
+	<header>
+		<a href="index.html"><img src="imagini/banner.png" alt="banner"></a>
+
+
+		<br><br>
+		<nav class="meniu">
+			<ul>
+				<li><a href="index.html">Pagina principala</a></li>
+				<li><a href="#"> Despre japonia </a>
+					<ul>
+						<li><a href="despre.html#geografie"> Geografie</a></li>
+						<li><a href="despre.html#demografie"> Demografie</a></li>
+						<li><a href="despre.html#politica">Politica</a></li>
+					</ul>
+				</li>
+				<li><a href="locuri.html">Locuri de vizitat</a></li>
+				<li><a href="galerie.html">Galerie</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div class="continut">
+
+		<p>Este ora:</p>
+
+		<p id="demo"></p>
+
+
+		<script>	
+			var myVar = setInterval(myTimer ,1000);
+			function myTimer() {
+				var d = new Date();
+				document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+			}
+		</script>
+
+		<div id="slide"></div>
+		
+		<section>
+		<canvas id="steag"></canvas>
+		</section>
+		<br>
+		<section>
+			<h2>Japonia pe scurt</h2>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;Japonia (în japoneză 日本, se citește Nippon sau Nihon, sens literal: „originea soarelui”) este o țară insulară din Asia de Est, situată pe un lanț de insule aflate între Oceanul Pacific și Marea Japoniei, la est de Peninsula Coreeană. Denumirea oficială este 日本国 Nipponkoku, textual „Țara de la originea soarelui.” Este cunoscută în românește și sub numele de Țara Soarelui Răsare. Potrivit legendei, Japonia a fost creată de către zei care au înfipt o sabie în ocean, la scoaterea ei formându-se patru picături ce au devenit insulele principale, precum și o multitudine de insule mici (peste 5000).</p>
+		</section>
+
+		<br><br>
+		<section id="infot">
+			<h2>Informații utile</h2>
+			<table>
+				<tr>
+					<th>Capitală:</th>
+					<td>Tokyo</td>
+				</tr>
+				<tr>
+					<th>Limba oficială:</th>
+					<td>Japoneza</td>
+				</tr>
+				<tr>
+					<th>Împăratul/Prim-ministrul:</th>
+					<td>Akihito/Shinzō Abe</td>
+				</tr>
+				<tr>
+					<th>Fondarea Japoniei:</th>
+					<td>11 februarie, 660 î.Hr</td>
+				</tr>
+				<tr>
+					<th>Suprafață:</th>
+					<td>377.944 km² </td>
+				</tr>
+				<tr>
+					<th>Populație:</th>
+					<td>127.799.000</td>
+				</tr>
+			</table>
+
+		</section>
+         <img id="chestii">
+		<section id="infol">
+			<h2>Informații utile</h2>
+			<ul>
+				<li>Capitala: Tokyo</li>
+				<li>Limba oficiala: Japoneza</li>
+				<li>Imparatul/Prim-ministrul: Akihito/Shinzō Abe </li>
+				<li>Suprafata: 377.944 km² </li>
+				<li>Populatie: 127.799.000</li>
+			</ul>
+		</section>
+	</div>
+
+	<script>
+		var el= document.getElementById("steag");
+		if (el && el.getContext) { 
+			var context = el.getContext('2d');
+			if(context){
+				context.fillStyle   = "#ffffff"; 
+				context.strokeStyle = "#CCCCCC"; 
+				context.lineWidth   = 1;
+				context.shadowOffsetX = 5;
+				context.shadowOffsetY = 5;
+				context.shadowBlur = 4;
+				context.shadowColor = 'rgba(0, 0, 0, 0.4)';
+				context.strokeRect(10, 10, 300, 200);
+				context.fillRect(10, 10, 300, 200);
+				context.shadowColor='rgba(0,0,0,0)';
+				context.fillStyle = "#d60818";
+				context.arc(160, 80, 60, 0, Math.PI*2, false);
+				context.fill();
+			}
+		}
+	</script>
+
+	<footer>
+		<section id="copyright">
+			&copy; 2016 - Tema TW - Mitrache Cristian (233)
+		</section>
+	</footer>
+</body>
+</html>

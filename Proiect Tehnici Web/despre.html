@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Japonia</title>
+	<meta name="author" content="Mitrache Cristian">
+	<meta charset="UTF-8">
+	<meta name="description" content="Proiect: Japonia">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+
+</head>
+
+
+<body>
+	<header>
+		<a href="index.html"><img src="imagini/banner.png" alt="banner"></a>
+
+
+		<br><br>
+		<nav class="meniu">
+			<ul>
+				<li><a href="index.html">Pagina principala</a></li>
+				<li><a href="#"> Despre japonia </a>
+					<ul>
+						<li><a href="despre.html#geografie"> Geografie</a></li>
+						<li><a href="despre.html#demografie"> Demografie</a></li>
+						<li><a href="despre.html#politica">Politica</a></li>
+					</ul>
+				</li>
+				<li><a href="locuri.html">Locuri de vizitat</a></li>
+				<li><a href="galerie.html">Galerie</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div class="continut">
+		<section>
+		<div class="slider">
+				<img src="imagini/insula.jpg" alt="gale1" width="600" height="200" class="slide">
+				<img src="imagini/strada.jpg" alt="gale2" width="600" height="200" class="slide">
+				<img src="imagini/umeda.jpg" alt="gale3" width="600" height="200" class="slide">
+				<img src="imagini/turnulTokyo.jpg" alt="gale4" width="600" height="200" class="slide">
+			</div>
+		</section>
+		<script>
+			var myIndex = 0;
+			slider();
+
+			function slider() {
+				var i;
+				var x = document.getElementsByClassName("slide");
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";  
+				}
+				myIndex++;
+				if (myIndex > x.length) {myIndex = 1}    
+					x[myIndex-1].style.display = "block";  
+				setTimeout(slider, 2000);
+			}
+		</script>
+
+		<h1>Despre Japonia</h1>
+
+		<section id="geografie">
+			<h2>Geografie</h2>
+
+			<section id="florasifauna">
+				<h3>Flora și fauna</h3>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;<b>Flora</b> din Hokkaido este caracterizată de păduri de conifere specifice zonei montane(brad, molid și larice), la altitudini mari, și de păduri de arbori nordici cu lemn de esență tare combinați, la altitudini mai joase. În Honshu, întâlnim o floră de tip temperat formată din: chiparos, pin umbrelâ, brad hemlock, tisă și pin alb. În zonele depresionare întâlnim stejarul și arborele de camfor și arbori de bambus. Shikoku și Kyushu sunt vestite pentru vegetația lor perenă. Trestia de zahăr și citricele se găsesc în zonele depresionare restrânse, arborii cu frunza lată la altitudini mai mari.</p>
+
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;În <b>fauna</b> din Japonia sunt identificate în jur de 140 de specii de animale. Singura specie de primată este macacul japonez ce poate fi întâlnit și în nord. Există 32 de specii de carnivore, printre care: ursul brun, hermina, nurca, ratonul, vulpea, lupul, morsa și foca. În ape se găsesc crabi și crevete. Mari grupuri de pești migratori sunt direcționate spre Japonia de către Curentul Japoniei și Curentul Kuril. Speciile de insecte sunt variate și ăn număr mare. Aici trăiesc peste 250 de specii de păsări și 8 specii de reptile.</p>
+			</section>
+			<br><br>
+			<section id="clima">
+				<h3>Clima</h3>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;Japonia este situată la limita nord-estică a zonei climatice aflate sub influența musonului asiatic, care aduce o cantitate mare de preicipitații pe teritoriul țării. Vremea are o dublă influență: una a sistemului climatic siberian și a doua. a tipului climatic din zona sudică a Pacificului. Clima este influențată de prezența Curentului Japoniei(Kuroshio), un curent cald iar nordul este dominat de Curentul Kuril(Oyashio), un curent rece, care acționează în estul insulei Hokkaido și la nord de Honshu. Zona intersecției celor doi curenți este una propice pescuitului. Curentul Tsushima, un braț al Curentului Japoniei, transportă apă caldă către nord, până în Marea Japoniei. Umiditatea este destul de ridicată tot timpul anului, cu precipitații ce variază, în medie, de la 1000 la peste 2500 mm. Temperatura medie variază de la 17°C, în porțiunile sudice, la 9°C, în extremitatea nordică. Hokkaido se confruntă cu ierni vitrege și îndelungate, în timp ce restul țării se bucură de vreme mai blândă în regiunile sudice, care au un climat subtropical. Zona Ryukyu este încălzită de prezența Curentului Japoniei și are un climat tropical. Shikoku și Kyushu au un climat subtropical. Sezonul taifunurilor începe din mai până în octombrie și de obicei, în fiecare an, câteva taifunuri, caracterizate de vânturi puternice și ploi abundente lovesc insulele.
+					&nbsp;&nbsp;&nbsp;&nbsp;Clima variază mult, de la temperată-rece în nord, cu ierni aspre, la subtropicală în sud</p>
+				</section>
+				<br><br>
+				<section id="orase">
+					<h3>Împărțire teritorială</h3>
+					<ul id="listorase">
+
+						<li>Hokkaido</li>
+						<li>Aomori</li>
+						<li>Iwate</li>
+						<li>Miyagi</li>
+						<li>Akita</li>
+						<li>Yamagata</li>
+						<li>Fukushima</li>
+						<li>Ibaraki</li>
+						<li>Tochigi</li>
+						<li>Gunma</li>
+						<li>Saitama</li>
+						<li>Chiba</li>
+						<li>Tokyo</li>
+						<li>Kanagawa</li>
+						<li>Niigata</li>
+						<li>Toyama</li>
+
+						<li>Ishikawa</li>
+						<li>Fukui</li>
+						<li>Yamanashi</li>
+						<li>Nagano</li>
+						<li>Gifu</li>
+						<li>Shizuoka</li>
+						<li>Aichi</li>
+						<li>Mie</li>
+						<li>Shiga</li>
+						<li>Kyoto</li>
+						<li>Osaka</li>
+						<li>Hyogo</li>
+						<li>Nara</li>
+						<li>Wakayama</li>
+						<li>Tottori</li>
+						<li>Shimane</li>
+
+						<li>Okayama</li>
+						<li>Hiroshima</li>
+						<li>Yamaguchi</li>
+						<li>Tokushima</li>
+						<li>Kagawa</li>
+						<li>Ehime</li>
+						<li>Kochi</li>
+						<li>Fukuoka</li>
+						<li>Saga</li>
+						<li>Nagasaki</li>
+						<li>Kumamoto</li>
+						<li>Oita</li>
+						<li>Miyazaki</li>
+						<li>Kagoshima</li>
+						<li>Okinawa</li>
+					</ul>
+
+				</section>
+
+			</section>
+			<br><br>
+			<section id="demografie">
+				<h2>Demografie</h2>
+				<section id="relsied">
+					<h3>Religie și educație</h3>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;Principalele <b>religii</b> din Japonia sunt budismul și șintoismul. Totuși, majoritatea japonezilor nu sunt adepții unei singure religii, ci încorporează în viața lor de zi cu zi caracteristici din ambele religii, într-un proces numit sincretism. Învățăturile budiste și șintoiste sunt adânc încorporate în viața zilnică din Japonia, deși japonezii pot să nu își dea seama de acest lucru.[judecată de valoare] În general, este dificil pentru cei necunoscători să separe religia „adevărată” japoneză de superstițiile și ritualurile de zi cu zi, iar majoritatea japonezilor nu își pun problema să le separe.</p>
+					<p>Sistemul <b>educației</b> obligatorii a fost introdus în Japonia în anul 1872, ca rezultat al restaurării Meiji. Din 1947, educația obligatorie constă în școala primară și gimnaziul, care durează 9 ani, (de la vârsta de 6 la 15 ani). Aproape toți copiii își continuă educația la un liceu, care durează trei ani, iar 96% din absolvenții de liceu merg mai departe la universitate, post liceale, școli de meserii sau alte instituții de învățământ superior.</p>
+				</section>
+
+			</section>
+			<br><br>
+			<section id="politica">
+				<h2>Politică</h2>
+				<section id="guvern">
+					<h3>Guvern</h3>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;Constituția Japoniei specifică faptul că "cel mai înalt organism de putere în stat" este parlamentul bicameral, Dieta Japoniei. Dieta constă din Camera Reprezentanților (Camera inferioară sau Shūgi-in) cu 480 de locuri, aleasă prin vot popular, la fiecare patru ani sau la dizolvare, și o Cameră a Consilierilor (Camera superioară sau Sangi-in) de 242 de locuri, ai cărei membri aleși popular au mandate de șase ani. Există vot universal pentru adulți (peste 20 de ani), cu vot secret pentru toate oficiile elective.Cabinetul este compus dintr-un Prim Ministru și miniștri de stat, și răspunde direct Dietei. Primul Ministru trebuie să fie membru al Dietei și este desemnat de colegii săi. Primul Ministru are puterea de a numi sau demite miniștri, majoritatea acestora fiind, obligatoriu, membri ai Dietei, toți membrii cabinetului trebuind să fie civili.</p>
+				</section>
+				<br><br>
+				<section id="imp">
+					<h3>Împărat</h3>
+					<p>Casa Imperială a Japoniei este condusă de Împăratul Japoniei. Constituția Japoniei definește împăratul ca "simbol al statului și al unității poporului". El execută datorii ceremoniale și nu are putere reală, nici măcar în situații de urgență. Suveranitatea este pusă în mâinile poporului japonez prin constituție. Deși statutul său oficial este disputat, la ocazii diplomatice, împăratul tinde să se comporte (doar dacă are susținere publică) ca și cum ar fi șef de stat. În 2006, Japonia este singura țară din lume condusă de un împărat. Floarea familiei imperiale japoneze este crizantema. Între anii 794-1868, Kyoto a fost capitala imperială a Japoniei. În mod oficial, împăratul Hirohito și-a renegat genealogia divină în 1946, la sfârșitul războiului dar în multe rituri el, împăratul îndeplinește încă o funcție sacerdotală.</p>
+				</section>
+			</section>
+		</div>
+		<footer>
+			<section id="copyright">
+				&copy; 2016 - Tema TW - Mitrache Cristian (233)
+			</section>
+		</footer>
+	</body>
+	</html>

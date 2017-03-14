@@ -1,0 +1,9 @@
+Multimea 1: 2 6 9 8 1 
+Multimea 2: 2 5 7 
+Reuniunea elem din multimea a si elem din multimea b este: 2 6 9 8 1 5 7 
+Intersectia elem din multimea a si elem din multimea b este: 2 
+Diferenta intre multimea a si multimea b: 6 9 8 1 
+Diferenta intre multimea b si multimea a: 5 7 
+
+Produsul cartezian intre A si B: (2,2) (2,5) (2,7) (6,2) (6,5) (6,7) (9,2) (9,5) (9,7) (8,2) (8,5) (8,7) (1,2) (1,5) (1,7) 
+Produsul cartezian intre B si A: (2,2) (2,6) (2,9) (2,8) (2,1) (5,2) (5,6) (5,9) (5,8) (5,1) (7,2) (7,6) (7,9) (7,8) (7,1) 

@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Blog: Proiect DAW</title>
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+                            <asp:LoginView ID="LoginView2" runat="server">
+                        <RoleGroups>
+                            <asp:RoleGroup Roles="Standard"></asp:RoleGroup>
+                        </RoleGroups>
+                        <LoggedInTemplate>
+                            <a href="Adauga.aspx"><asp:Image ID="pozaADD" runat="server" CssClass="add-icon" ImageUrl="~/Button-Add-icon.png" /></a>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+        <nav class="navbar navbar-dark navbar-fixed-top bg-inverse">
+            <div class="container">
+                <div class="float-xs-left">
+                    <asp:LoginView ID="LoginView1" runat="server">
+                        <LoggedInTemplate>
+                            Bine ai venit, <%= Page.User.Identity.Name %>
+                            <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutPageUrl="~/Default.aspx"/>
+                        </LoggedInTemplate>
+                        <AnonymousTemplate>
+                            <a href="Autentificare.aspx" style="padding-right: 10px">Autentificare</a>
+                            <a href="Inregistrare.aspx">Inregistrare</a>
+                        </AnonymousTemplate>
+                    </asp:LoginView>
+                </div>
+            </div>
+        </nav>
+
+        <div>
+            <div class="blog-header">
+                <div class="container">
+
+                    <h1 class="blog-title"><a href="Default.aspx">Blog Project: CodeSpot</a></h1>
+                    <p class="lead blog-description">Take your daily dose of code.</p>
+                    <br />
+                    <div class="float-xs-right">
+
+                        <asp:TextBox ID="cautaTB" runat="server"></asp:TextBox>
+                        <asp:Button ID="trimiteButon" runat="server" Text="Cauta" OnClick="trimiteButon_Click" />
+                    </div>
+
+                    <div class="float-xs-left">
+                        <a href="Cauta.aspx?Tip=Categ&NumeCateg=FrontEnd">FrontEnd</a>
+                        <a href="Cauta.aspx?Tip=Categ&NumeCateg=BackEnd">BackEnd</a>
+                        <a href="Cauta.aspx?Tip=Categ&NumeCateg=Software">Software</a>
+                    </div>
+                </div>
+            </div>
+            <%--        <div class="menu">
+            <a href="Default.aspx">Acasa</a>
+            <a href="Adauga.aspx">Adauga Postare</a>
+        </div>--%>
+            <div class="container">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <br />
+        <br />
+        <footer class="blog-footer">
+            <div class="container">
+                <span class="text-muted">&copy; Mitrache Cristian (332)</span>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>
